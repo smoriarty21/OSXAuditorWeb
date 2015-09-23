@@ -1,0 +1,44 @@
+/* Title */
+#title-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 40px;
+    width: 100%;
+
+    background-color: #000000;
+}
+
+#title {
+    position: absolute;
+    left: 5px;
+    top: 7px;
+
+    font-size: 22px;
+    font-family: 'Helvetica', Arial, sans-serif;
+
+    color: #666666;
+}
+
+/* Menu */
+.menu-item {
+    color: #FFFFFF;
+}
+
+#menu-wrapper {
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    height: 40px;
+    width: 100%;
+
+    background-color: #000000;
+}
+
+#link-row-wrapper {
+    position: relative;
+    top: 5px;
+}
+
