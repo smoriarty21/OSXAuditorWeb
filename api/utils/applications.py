@@ -28,15 +28,11 @@ def ParsePackagesDir(PackagesDirPath):
                     CFBundleExecutablepath = ""
                 elif os.path.isfile(os.path.join(PackagesDirPath, PackagePath, "Contents", plistfile)):
                     PackagePlistPath = os.path.join(PackagesDirPath, PackagePath, "Contents", plistfile)
-                    print PackagePlistPath
-                    print
                     CFBundleExecutablepath = "Contents/MacOS/"
                 else:
-                    log.PrintAndLog(os.path.join(PackagesDirPath, PackagePath).decode("utf-8"), "DEBUG")
                     log.PrintAndLog(u"Cannot find any Info.plist in " + PackagePath.decode("utf-8"), "ERROR")
                     continue
 
-                log.PrintAndLog(os.path.join(PackagesDirPath, PackagePath).decode("utf-8"), "DEBUG")
                 PackagePlist = core.UniversalReadPlist(PackagePlistPath)
 
                 if PackagePlist:
@@ -51,7 +47,6 @@ def ParsePackagesDir(PackagesDirPath):
                                 if Md5 not in HASHES:
                                     data['hash'] = str(Md5)
                                     HASHES.append(Md5)
-                                log.PrintAndLog(Md5 + u" "+ FilePath.decode("utf-8") + u" - " + time.ctime(os.path.getmtime(FilePath)) + u" - " + time.ctime(os.path.getctime(FilePath)) + u"\n", "INFO")
                                 data['lastpathmod'] = time.ctime(os.path.getmtime(FilePath))
                                 data['lastmetamod'] = time.ctime(os.path.getctime(FilePath))
 

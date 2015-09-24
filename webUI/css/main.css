@@ -42,3 +42,8 @@
     top: 5px;
 }
 
+/* Applications */
+#installed-apps-table {
+    display: none;
+}
+

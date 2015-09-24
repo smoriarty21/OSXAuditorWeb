@@ -25,14 +25,12 @@ def BigFileMd5(FilePath):
     Md5 = hashlib.md5()
     try:
         with open(FilePath, 'rb') as f:
-            print "im opennnn"
-            print FilePath
             for Chunk in iter(partial(f.read, 1048576), ''):
-                print "IM IN HERE AND SHIT"
                 Md5.update(Chunk)
             return Md5.hexdigest()
     except:
         log.PrintAndLog(u"Cannot hash " + FilePath.decode("utf-8"), "ERROR")
+        
         return False
 
 def HashDir(Title, Path):

@@ -59,7 +59,7 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">Installed Applications</a></li>
+                            <li><a href="/index.php/InstalledApps">Installed Applications</a></li>
                     </div>
                     <div class='menu-item col-xs-1 dropdown' style='width: 125px'>
                         <a class="dropdown-toggle" role="button" id="quarantines-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -128,8 +128,11 @@
             </div>
         </div>
          
-        <div style='position:absolute;top:80px;left:0'>
+        <div style='position:absolute;top:80px;left:5px'>
             <?php echo $body; ?>
+            <div id='loading-string' style='display: none'>
+                <h3>Loading...</h3>
+            </div>
         </div>
 
         <script>

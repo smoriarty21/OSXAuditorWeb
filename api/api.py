@@ -29,7 +29,6 @@ def get_kerner_extensions():
     if request.method == 'POST':
         HASH_DATA = kernel.ParsePackagesDir(os.path.join(ROOT_PATH, "System/Library/Extensions/"))
 
-    # request.method == 'GET'
     return HASH_DATA
 
 @app.route("/getstartup", methods=['POST'])
