@@ -50,8 +50,13 @@ function fill_table(data) {
 
             $('#installed-apps-table').append(table_data);
 
-            $('#installed-apps-table').show(table_data);
-            $('#loading-string').hide();
+            show_table();
         }
     }
+}
+
+function show_table() {
+    $('#installed-apps-table').show();
+    $('#installed-apps-title').show();
+    $('#loading-string').hide();
 }
